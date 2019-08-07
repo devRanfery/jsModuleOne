@@ -193,3 +193,68 @@ if (vowelsCount < 3) {
     console.log(`Tiene  ${vowelsCount}  vocales`)
 }
 
+//------------------------------------------------------------------------------
+//class2019-08-05
+
+function addition(numberOne, numberTwo) {
+    const MONTHLY_SALARY = 450 * 30
+    return numberOne + numberTwo
+}
+
+function subtraction(numberOne, numberTwo) {
+    return numberTwo - numberOne
+}
+
+const calculator = function () {
+    let operator = '-'
+    let total = Number()
+    if (operator === '-') {
+        total = subtraction(1, 2)
+        console.log(`La resta es: ${total}`);
+    } else if (operator === '+') {
+        total = addition(1, 2)
+        console.log(`La suma es: ${total}`);
+    } else {
+        console.error('Operador no soportado');
+    }
+    return undefined
+}
+
+var total = calculator(4, 5, "-")
+
+
+//Tarea 
+
+/*
+FOR IN
+ 
+3.- Se tiene una lista con el nombre de cada uno de los empleados,
+    con los días que faltaron al trabajo
+    Ej -> [[David, 4]], [josé , 2]
+ 
+a.) Si el sueldo diario son 450.00 Y por cada día que faltaron se les 
+    descuenta el 2% del salario (acumulable) cuanto es el sueldo fnal 
+    del empleado
+ 
+*/
+
+//crear funcion
+const getDiscountPercent = function (total, percent) {
+    return total * (percent / 100)
+}
+
+
+const MONTHLY_SALARY = 450 * 30
+const DISCOUNT_PERCENT = 2
+let paysheet = [['Thelma', 5], ['Irving', 3], ['Hector', 1]]
+
+for (let index in paysheet) {
+    let worker = paysheet[index]
+    let totalDiscountPercent = worker[1] * DISCOUNT_PERCENT
+    let totalDiscount = getDiscountPercent(MONTHLY_SALARY, totalDiscountPercent)
+    let finalSalary = MONTHLY_SALARY - totalDiscount
+    console.log(`${worker[0]}: $${finalSalary}`);
+}
+
+
+//------------------------------------------------------------------------------
