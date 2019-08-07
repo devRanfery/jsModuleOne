@@ -123,3 +123,73 @@ var curp = firstLastName[0] + "A" +
 console.log(curp.toUpperCase())
 
 //------------------------------------------------------------------------------
+//class/2019-08-02
+
+const numbers = [1, 2, 3, 4, 5, 6]
+var index = 0
+
+while (index < numbers.length) {
+    console.log(numbers[index] ** 2)
+    index++
+}
+
+//------------------------------
+var name = "Hector"
+var index = name.length - 1;
+do {
+    console.log(name[name.length - (index + 1)])
+    index--
+} while (index >= 0)
+
+/*L    I   
+6 - (5 + 1) = 0 - H
+6 - (4 + 1) = 1 - e
+6 - (3 + 1) = 2 - c
+6 - (2 + 1) = 3 - t
+6 - (1 + 1) = 4 - o
+6 - (0 + 1) = 5 - r
+*/
+
+var reversedName = "rotceH"
+var index = reversedName.length - 1;
+var finalName = String()
+do {
+    finalName = finalName + reversedName[index]
+    index--
+} while (index >= 0)
+console.log(finalName)
+
+//EJERCICIOS!
+//Verificar si la palabra {word} tiene al menos 3 vocales
+
+//con el metodo .match
+
+var word = "perro"
+var vowels = word.match(/[aeiou]/gi).length
+
+if (vowels < 3) {
+    console.error("Error")
+} else {
+    console.log('Tiene ' + vowels + ' vocales')
+}
+
+
+//ciclo for
+var vowelsCount = 0
+var word = "ajdjenndickso"
+
+for (let i = 0; i <= word.length - 1; i++) {
+
+    if (word.charAt(i) == "a" || word.charAt(i) == "e" ||
+        word.charAt(i) == "i" || word.charAt(i) == "o" ||
+        word.charAt(i) == "u") {
+        vowelsCount = vowelsCount + 1
+    }
+}
+
+if (vowelsCount < 3) {
+    console.error("Error")
+} else {
+    console.log(`Tiene  ${vowelsCount}  vocales`)
+}
+
