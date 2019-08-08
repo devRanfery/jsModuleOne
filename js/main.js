@@ -258,3 +258,58 @@ for (let index in paysheet) {
 
 
 //------------------------------------------------------------------------------
+//Class2019-08-06
+
+/*
+  1.-Escribir una funcion que acepte como argumento un string y capitalizar
+  cada palabra dentro del string
+
+  "Hola a todos" -> "Hola A Todos"
+*/
+
+// 'Holi a todos'
+// ['Holi','a','todos']
+// 1-Holi 2-a 3-todos 
+// 1-H      2-A     3-T
+// 1-Hola   2-A     3-Todos
+// ['Holi','A','Todos']
+// 'Holi A Todos'
+
+const capitalize = function (phrase) {
+    let wordArray = phrase.split(' ')
+    for (index in wordArray) {
+        let word = wordArray[index]
+        let letterCapitalize = word[0].toUpperCase()
+        let wordCapitalize = `${letterCapitalize}${word.slice(1)}`
+        wordArray[index] = wordCapitalize
+    }
+    return wordArray.join(' ')
+}
+
+
+/*
+   2.-Escribe una funcion cuyo argumento sea un string y devuelva la palabra
+   mas larga dentro el
+
+   "Hola a todos" -> "todos"
+*/
+
+var word = "Holas a todos"
+
+const SearchLongerWord = function (word) {
+    let longestWord = ""
+    palabras = word.split(" ")
+    palabras.forEach(function (palabra) {
+        if (palabra.length > longestWord.length) {
+            longestWord = palabra
+        };
+    });
+    return longestWord
+}
+
+
+/*
+   3.-Dada una matriz obtener la cantidad total de UNOS que aparezcan en ella
+
+   [[0,0,1],[1,0,1].[0,9,1]] -> 4
+*/
