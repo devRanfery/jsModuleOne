@@ -294,16 +294,16 @@ const capitalize = function (phrase) {
    "Hola a todos" -> "todos"
 */
 
-var word = "Holas a todos"
+var str = "Hola a todos"
 
-const SearchLongerWord = function (word) {
+const SearchLongerWord = function (str) {
     let longestWord = ""
-    palabras = word.split(" ")
-    palabras.forEach(function (palabra) {
-        if (palabra.length > longestWord.length) {
-            longestWord = palabra
-        };
-    });
+    words = str.split(" ")
+    words.forEach(function (word) {
+        if (word.length > longestWord.length) {
+            longestWord = word
+        }
+    })
     return longestWord
 }
 
